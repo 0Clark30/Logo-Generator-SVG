@@ -26,7 +26,7 @@ class SVG {
               fill="${color}"
             >${text}</text>`;
   }
-  setShapeColor(color) {
+  setShape(color) {
     this.shapeElement = shape.setColor(color);
   }
 }
@@ -62,6 +62,7 @@ inquirer
 .then((response) => {
     const { text, textColor, shape, shapeColor} = response;
     if (shape === 'Circle'){
+        render();
         setTextElement(text, textColor) 
     }
 
