@@ -31,5 +31,11 @@ class SVG {
   }
 }
 
-inquirer()
-.prompt()
+inquirer
+.prompt([
+    {
+        type:
+        message:
+        input:
+    }
+])
