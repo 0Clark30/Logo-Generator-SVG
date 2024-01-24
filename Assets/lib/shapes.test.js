@@ -1,4 +1,4 @@
-// The following example test should pass:
+const Shapes = require('../lib/shapes')
 
 // ```js
 // const shape = new Triangle();

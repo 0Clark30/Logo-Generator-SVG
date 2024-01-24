@@ -2,6 +2,9 @@ class Shape {
    constructor(color) {
     this.color = color;
    } 
+   setColor() => {
+    
+   }
 }
 
 class Circle extends Shape {
@@ -24,7 +27,7 @@ class Triangle extends Shape {
 class Square extends shape {
   constructor() {
      render(){
-  `<polygon points="150, 18 244, 182 56, 182" fill="${shape.color}" />`
+  `<polygon points="235,235 164,235 164,164 235,164"  fill="${shape.color}" />`
 }
   }
 }
