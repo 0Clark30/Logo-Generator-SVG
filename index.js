@@ -23,19 +23,46 @@ class SVG {
               y="125"
               font-size="60"
               text-anchor="middle"
-              fill="white"
-            ></text>`;
+              fill="${color}"
+            >${text}</text>`;
   }
-  setShapeElement(shape) {
-    this.shapeElement = shape.render();
+  setShapeColor(color) {
+    this.shapeElement = shape.setColor(color);
   }
 }
 
 inquirer
 .prompt([
     {
-        type:
-        message:
-        input:
+        type:"input",
+        message:"Type 3 Characters for your Logo ((no more than 3) ex. 'TLC')",
+        input: "text"
+    }
+    {
+        type: "input",
+        message: "What text color do you want for the Characters in your Logo (use color name or hexadecimal number)?",
+        input:"textColor"
+    }
+    {
+        type: "List",
+        message: "Choose a shape for your Logo:",
+        input:"shape",
+        choices: [
+            "Circle",
+            "Triangle",
+            "Square"
+        ]
+    }
+    {
+        type: "input",
+        message: "What color do you want for your shape (use color name or hexadecimal number)?",
+        input:"shapeColor"
     }
 ])
+.then((response) => {
+    const { text, textColor, shape, shapeColor} = response;
+    if (shape === 'Circle'){
+        setTextElement(text, textColor) 
+    }
+
+})
