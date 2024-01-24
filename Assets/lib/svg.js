@@ -1,4 +1,7 @@
-
+const shapes = require("./Assets/lib/shapes/shapes");
+const circle = require("./Assets/lib/shapes/circle");
+const triangle = require("./Assets/lib/shapes/triangle");
+const square = require("./Assets/lib/shapes/square");
 
 class SVG {
   constructor() {
@@ -25,7 +28,7 @@ class SVG {
             >${text}</text>`;
   }
   setShape(color) {
-    this.shapeElement = shape.setColor(color);
+    this.shapeElement = shapes.setColor(color);
   }
 }
 
