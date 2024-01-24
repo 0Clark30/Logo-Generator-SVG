@@ -1,12 +1,10 @@
 class Shape {
-   constructor(color) {
+  constructor(color) {
     this.color = color;
-   } 
-   setColor() => {
-    
-   }
+  }
+  setColor(colorVar) {
+    this.color = colorVar;
+  }
 }
 
 module.exports = Shape;
-
-

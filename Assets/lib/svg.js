@@ -1,8 +1,6 @@
-const shapes = require("./Assets/lib/shapes/shapes");
-const circle = require("./Assets/lib/shapes/circle");
-const triangle = require("./Assets/lib/shapes/triangle");
-const square = require("./Assets/lib/shapes/square");
+const shapes = require("./shapes/shape");
 
+const newShape = new shapes();
 class SVG {
   constructor() {
     this.textElement = "";
@@ -19,7 +17,7 @@ class SVG {
           </svg>`;
   }
   setTextElement(text, color) {
-    `<text
+   return `<text
               x="150"
               y="125"
               font-size="60"
@@ -27,9 +25,11 @@ class SVG {
               fill="${color}"
             >${text}</text>`;
   }
-  setShape(color) {
-    this.shapeElement = shapes.setColor(color);
+  setShapeColor(color) {
+    return newShape.setColor(color)
   }
 }
+
+
 
 module.exports = SVG;

@@ -1,12 +1,12 @@
-const Shape = require("../lib/shapes/shapes");
-
+const Shape = require("./shape");
 
 class Square extends Shape {
   constructor(color) {
-    super(color)
-     render(){
-  `<polygon points="235,235 164,235 164,164 235,164"  fill="${this.color}" />`
-}
+    super(color);
+  }
+
+  setShape() {
+    return `<polygon points="235,235 164,235 164,164 235,164" />`;
   }
 }
 

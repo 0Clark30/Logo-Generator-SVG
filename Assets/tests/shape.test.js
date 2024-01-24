@@ -1,4 +1,4 @@
-const Shapes = require("../lib/shapes/shape");
+// const Shapes = require("../lib/shapes/shape");
 
 // ```js
 // const shape = new Triangle();
