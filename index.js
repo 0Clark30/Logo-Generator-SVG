@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const inquirer = require("inquirer");
-const { Circle, Square, Triangle } = require("./Assets/lib/shapes");
+const shapes = require("./Assets/lib/shapes/shapes");
 
 class SVG {
   constructor() {
