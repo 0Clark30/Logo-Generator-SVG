@@ -9,9 +9,9 @@ const promptUser = require("./Assets/lib/prompts/questions");
 const circle = new Circle();
 const triangle = new Triangle();
 const square = new Square();
-const circleEl = circle.setShape();
-const triangleEl = triangle.setShape();
-const squareEl = square.setShape();
+const circleEl = circle.render();
+const triangleEl = triangle.render();
+const squareEl = square.render();
 
 
 

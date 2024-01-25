@@ -5,7 +5,7 @@ class Square extends Shape {
     super(color);
   }
 
-  setShape() {
+  render() {
     return `<polygon points="235,235 164,235 164,164 235,164" />`;
   }
 }
