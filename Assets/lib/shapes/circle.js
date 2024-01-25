@@ -5,7 +5,7 @@ class Circle extends Shape {
     super(color);
   }
   setShape() {
-    return `<circle cx="150 cy="100 r="80"`;
+    return `<circle cx="150" cy="100" r="80"`;
   }
 }
 module.exports = Circle;

@@ -19,31 +19,20 @@ function init() {
   promptUser().then((response) => {
     const { text, textColor, shape, shapeColor } = response;
     console.log(response);
-     if (shape === "Circle") {
-       logoShape.replace(`${circleEl} fill="${shapeColor}"/>`);
-     } else if (shape === "Triangle") {
-       logoShape.replace(`${triangleEl} fill="${shapeColor}"/>`);
-     } else {
-       logoShape.replace(`${squareEl} fill="${shapeColor}"/>`);
-     }
-    const logoText = `
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
-              <text
-              x="150"
-              y="125"
-              font-size="60"
-              text-anchor="middle"
-              fill="${textColor}"
-            >${text}</text>`;
-    let logoShape = "";
+    let logoShape = ''
     if (shape === "Circle") {
-      logoShape.replace(`${circleEl} fill="${shapeColor}"/>`)
+       logoShape = `${circleEl} fill="${shapeColor}"/>`;
     } else if (shape === "Triangle") {
-      logoShape.replace(`${triangleEl} fill="${shapeColor}"/>`)
+       logoShape = `${triangleEl} fill="${shapeColor}"/>`;
     } else {
-      logoShape.replace(`${squareEl} fill="${shapeColor}"/>`);
+       logoShape = `${squareEl} fill="${shapeColor}"/>`;
     }
-    const logo = logoText + logoShape + "</svg>";
+    const svgEl = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">`
+    const logoText = `
+            
+              <text x="150" y="125" font-size="55" text-anchor="middle" fill="${textColor}" >${text}</text>`;
+
+    const logo = `${svgEl} ${logoShape} ${logoText}  </svg>`;
     console.log(logo)
     fs.writeFile("logo.svg", logo);
   });
