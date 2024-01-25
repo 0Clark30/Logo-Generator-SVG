@@ -3,9 +3,9 @@ const Circle = require("./Assets/lib/shapes/circle");
 const Triangle = require("./Assets/lib/shapes/triangle");
 const Square = require("./Assets/lib/shapes/square");
 const promptUser = require("./Assets/lib/prompts/questions");
-// const SVG = require("./Assets/lib/svg");
 
-// const svg = new SVG();
+
+
 const circle = new Circle();
 const triangle = new Triangle();
 const square = new Square();
