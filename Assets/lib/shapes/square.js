@@ -6,7 +6,7 @@ class Square extends Shape {
   }
 
   render() {
-    return `<polygon points="235,235 164,235 164,164 235,164" fill ="${this.color}"/>`;
+    return `<polygon points="235,235 164,235 164,164 235,164"`;
   }
   setColor(colorVar) {
     this.color = colorVar;
