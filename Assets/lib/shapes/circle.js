@@ -5,7 +5,10 @@ class Circle extends Shape {
     super(color);
   }
   render() {
-    return `<circle cx="150" cy="100" r="80"`;
+    return `<circle cx="150" cy="100" r="80" fill ="${this.color}" />`;
+  }
+  setColor(colorVar) {
+    this.color = colorVar;
   }
 }
 module.exports = Circle;

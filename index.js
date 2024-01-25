@@ -9,6 +9,9 @@ const promptUser = require("./Assets/lib/prompts/questions");
 const circle = new Circle();
 const triangle = new Triangle();
 const square = new Square();
+triangle.setColor('blue')
+
+
 const circleEl = circle.render();
 const triangleEl = triangle.render();
 const squareEl = square.render();
@@ -21,18 +24,18 @@ function init() {
     console.log(response);
     let logoShape = ''
     if (shape === "Circle") {
-       logoShape = `${circleEl} fill="${shapeColor}"/>`;
+       logoShape = circle.setColor(shapeColor);
     } else if (shape === "Triangle") {
-       logoShape = `${triangleEl} fill="${shapeColor}"/>`;
+       logoShape = triangle.setColor(shapeColor);
     } else {
-       logoShape = `${squareEl} fill="${shapeColor}"/>`;
+       logoShape = square.setColor(shapeColor);
     }
     const svgEl = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">`
     const logoText = `
             
-              <text x="150" y="125" font-size="55" text-anchor="middle" fill="${textColor}" >${text}</text>`;
+              <text x="150" y="128" font-size="60" text-anchor="middle" fill="${textColor}" >${text}</text>`;
 
-    const logo = `${svgEl} ${logoShape} ${logoText}  </svg>`;
+    const logo = `${svgEl} ${logoShape.render()} ${logoText}  </svg>`;
     console.log(logo)
     fs.writeFile("logo.svg", logo);
   });

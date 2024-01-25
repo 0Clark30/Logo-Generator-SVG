@@ -5,7 +5,10 @@ class Triangle extends Shape {
     super(color);
   }
   render() {
-   return `<polygon points="150, 18 244, 182 56, 182" `;
+    return `<polygon points="150, 18 244, 182 56, 182" fill ="${this.color}" />`;
+  }
+  setColor(colorVar) {
+    this.color = colorVar;
   }
 }
 module.exports = Triangle;
